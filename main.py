@@ -42,11 +42,11 @@ def check_new(tar_photo, recipient_email):
                 quit()
         else:
             return True
-         
-        
-            
-    
-    
+
+
+
+
+
 parser = argparse.ArgumentParser(usage='A program to annoy someone by sending them pictures of Kim Jong-Un looking at things.')
 parser.add_argument('recipient',
                     help = 'Name of the person to whom the email is sent')
@@ -65,10 +65,10 @@ parser.add_argument('sender mail server password',
 
 args = parser.parse_args()
 
-new_photo = kim_photo.KimPhoto(kim_photo.get_newest_photo())
+new_photo = kim_photo.KimPhoto(kim_photo.get_random_photo())
 check_new(new_photo, args.__getattribute__("recipient e-mail"))
 
-message = emailer.KimMail(new_photo, 
+message = emailer.KimMail(new_photo,
                           args.__getattribute__("recipient"),
                           args.__getattribute__("recipient e-mail"),
                           args.__getattribute__("sender"),
