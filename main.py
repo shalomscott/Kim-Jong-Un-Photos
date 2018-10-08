@@ -33,15 +33,7 @@ def check_new(tar_photo, recipient_email):
         raise TypeError("{} not a KimPhoto".format(photo.__str__))
     if EMAIL_CHECK_REGEX.match(recipient_email) is None:
         raise ValueError("{} must be a valid e-mail address".format(recipient_email))
-    if not os.path.isfile(PATH+"/hist.log"):
-        return True
-    with open(PATH+"/hist.log", "rb") as f:
-        log = pickle.load(f)
-        if log[recipient_email] == tar_photo.src:
-                print("[+]\t{} has already seen the most recent Kim photo".format(recipient_email))
-                quit()
-        else:
-            return True
+    return True
 
 
 
