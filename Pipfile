@@ -1,0 +1,10 @@
+[packages]
+gunicorn = "*"
+flask = "*"
+requests = "*"
+argparse = "*"
+bs4 = "*"
+html5lib = "*"
+
+[requires]
+python_version = "3.6"
